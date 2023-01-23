@@ -1,0 +1,54 @@
+Rithvik VR@LAPTOP-3136G0O9 MINGW64 ~/Dropbox/My PC (LAPTOP-3136G0O9)/Desktop/Cognizant/Git (master)
+$ ls -al
+total 33
+drwxr-xr-x 1 Rithvik VR 197121    0 Jan 23 21:16  ./
+drwxr-xr-x 1 Rithvik VR 197121    0 Jan 23 20:25  ../
+drwxr-xr-x 1 Rithvik VR 197121    0 Jan 23 21:12  .git/
+-rw-r--r-- 1 Rithvik VR 197121   32 Jan 23 20:50  Welcome.txt
+-rw-r--r-- 1 Rithvik VR 197121 6154 Jan 23 21:08 'handson 1.txt'
+-rw-r--r-- 1 Rithvik VR 197121 1810 Jan 23 21:09 'handson 1.zip'
+
+Rithvik VR@LAPTOP-3136G0O9 MINGW64 ~/Dropbox/My PC (LAPTOP-3136G0O9)/Desktop/Cognizant/Git (master)
+$ touch file1.log
+
+Rithvik VR@LAPTOP-3136G0O9 MINGW64 ~/Dropbox/My PC (LAPTOP-3136G0O9)/Desktop/Cognizant/Git (master)
+$ mkdir log
+
+Rithvik VR@LAPTOP-3136G0O9 MINGW64 ~/Dropbox/My PC (LAPTOP-3136G0O9)/Desktop/Cognizant/Git (master)
+$ git status
+On branch master
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        file1.log
+        handson 1.txt
+        handson 1.zip
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+Rithvik VR@LAPTOP-3136G0O9 MINGW64 ~/Dropbox/My PC (LAPTOP-3136G0O9)/Desktop/Cognizant/Git (master)
+$ touch ~/.gitignore_global
+
+Rithvik VR@LAPTOP-3136G0O9 MINGW64 ~/Dropbox/My PC (LAPTOP-3136G0O9)/Desktop/Cognizant/Git (master)
+$ git config --global core.excludesfile ~/.gitignore_global
+
+Rithvik VR@LAPTOP-3136G0O9 MINGW64 ~/Dropbox/My PC (LAPTOP-3136G0O9)/Desktop/Cognizant/Git (master)
+$ vi ~/.gitignore_global
+
+Rithvik VR@LAPTOP-3136G0O9 MINGW64 ~/Dropbox/My PC (LAPTOP-3136G0O9)/Desktop/Cognizant/Git (master)
+$ cat ~/.gitignore_global
+*.log
+log/
+
+Rithvik VR@LAPTOP-3136G0O9 MINGW64 ~/Dropbox/My PC (LAPTOP-3136G0O9)/Desktop/Cognizant/Git (master)
+$ git status
+On branch master
+nothing to commit, working tree clean
+
+Rithvik VR@LAPTOP-3136G0O9 MINGW64 ~/Dropbox/My PC (LAPTOP-3136G0O9)/Desktop/Cognizant/Git (master)
+$ git status --ignored
+On branch master
+Ignored files:
+  (use "git add -f <file>..." to include in what will be committed)
+        file1.log
+
+nothing to commit, working tree clean
